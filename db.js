@@ -4,11 +4,11 @@ const userSchema = new Schema({
   email: { type: String, unique: true },
   username: String,
   password: String,
-  email: String,
   fullName: String,
   state: String,
   city: String,
 });
+
 const creatorSchema = new Schema({
   email: { type: String, unique: true },
   username: String,
@@ -17,6 +17,7 @@ const creatorSchema = new Schema({
   state: String,
   city: String,
 });
+
 const courseSchema = new Schema({
   creatorId: Types.ObjectId,
   title: String,
@@ -25,6 +26,7 @@ const courseSchema = new Schema({
   price: Number,
   thumbnailUrl: String,
 });
+
 const purchaseSchema = new Schema({
   courseId: Types.ObjectId,
   userId: Types.ObjectId,
